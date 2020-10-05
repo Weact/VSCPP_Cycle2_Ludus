@@ -1,14 +1,16 @@
+#include <iostream>
 #include <stdio.h>
 #include "TPoint.h"
 
-tpoint createPoint(int px, int py) {
-    tpoint p;
-    p.x = px;
-    p.y = py;
+using namespace std;
 
-    return p;
-}
+   tpoint createPoint(int px, int py) { //method which create a point and give it a position : return the point
+       tpoint p;
+       p.x = px;
+       p.y = py;
+       return p;
+   }  
 
-void displayPoint(tpoint p) {
-    printf("Point [X] : %d / [Y] : %d\n", p.x, p.y);
-}
+   void displayPoint(tpoint p) { //display point's position
+       printf("Point [X] : %d / [Y] : %d\n", p.x, p.y);
+   }

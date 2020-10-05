@@ -2,12 +2,12 @@
 
 
 //TYPES
-typedef struct tpoint {
-    int x = 0;
-    int y = 0;
-}tpoint;
+    typedef struct tpoint { //point structure
+        int x = 0; //position x
+        int y = 0; //position y
+    }tpoint;
 
 
 //PROTOTYPES
-tpoint createPoint(int px, int py);
-void displayPoint(tpoint p);
+    tpoint createPoint(int px, int py); //method which create a point and give it a position : return the point
+    void displayPoint(tpoint p); //display point's position
