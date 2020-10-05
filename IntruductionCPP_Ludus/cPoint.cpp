@@ -9,7 +9,7 @@ cPoint::cPoint() //default constructor, init to NULL
     this->m_px = NULL;
     this->m_py = NULL;
     this->m_str = "DEFAULT";
-    cout << "A point has been created !" << endl;
+    cout << "A point has been created ! ==>DEBUG (" << m_px << " : " << m_py << " : " << m_str << ") DEBUG<==" << endl;
 }
 
 cPoint::cPoint(int x, int y) //constructor init to values
@@ -17,7 +17,7 @@ cPoint::cPoint(int x, int y) //constructor init to values
     this->m_px = x;
     this->m_py = y;
     this->m_str = "DEFAULT";
-    cout << "A point has been created and is already initialized !" << endl;
+    cout << "A point has been created and is already initialized ! ==>DEBUG (" << m_px << " : " << m_py << " : " << m_str << ") DEBUG<==" << endl;
 }
 
 cPoint::cPoint(int x, int y, string str)
@@ -25,7 +25,7 @@ cPoint::cPoint(int x, int y, string str)
     this->m_px = x;
     this->m_py = y;
     this->m_str = str;
-    cout << "A point has been created and is already initialized with string member !" << endl;
+    cout << "A point has been created and is already initialized with string member ! ==>DEBUG (" << m_px << " : " << m_py << " : " << m_str << ") DEBUG<==" << endl;
 }
     //DESTRUCTOR(S)
 cPoint::~cPoint() //Default destructor

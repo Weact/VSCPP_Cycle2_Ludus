@@ -104,6 +104,25 @@ int main()
 #pragma endregion
 //[END PART 4]
 
+//[PART 5]
+#pragma region Part5
+    cout << "\n\n[===== PART 5 =====]\n\n";
+
+        //POINTS ARRAY CREATION [100]
+    cPoint basePoint(0, 0, "BasePoint");
+    cPoint tabPoints[100];
+    
+    for (int i = 0; i < 100; i++)
+    {
+        tabPoints[i].setX(basePoint.getX()+i);
+        tabPoints[i].setY(basePoint.getY()+i*2);
+        tabPoints[i].setSTR(basePoint.getSTR());
+
+        tabPoints[i].display_point();
+    }
+#pragma endregion
+//[END PART 5]
+
     cout << endl;
     cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;
     return 0;
