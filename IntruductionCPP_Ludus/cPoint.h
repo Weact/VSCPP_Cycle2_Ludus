@@ -1,4 +1,6 @@
 #pragma once
+#ifndef CPOINT_H
+#define CPOINT_H
 
 class cPoint
 {
@@ -10,3 +12,4 @@ public:
     void display_point() const; //display point's position
 }; 
 
+#endif // !CPOINT_H

@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <stdio.h>
-#include "TPoint.h";
+//#include "TPoint.h";
 #include "cPoint.h"
 using namespace std;
 
@@ -13,10 +13,10 @@ int main()
 
     //Typedef struct
 
-    tpoint myPoint = createPoint(5, 10); //create a point myPoint and give the position 5 10
-    displayPoint(myPoint); //display point's position
+    //tpoint myPoint = createPoint(5, 10); //create a point myPoint and give the position 5 10
+    //displayPoint(myPoint); //display point's position
 
-    cout << endl << "Separate struct and object" << endl << endl;
+    //cout << endl << "Separate struct and object" << endl << endl;
 
 
     //Objects

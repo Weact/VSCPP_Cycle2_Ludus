@@ -21,5 +21,5 @@ void cPoint::set_position(int x, int y) { //method which init the position value
 }
 
 void cPoint::display_point() const { //display point's position
-    cout << "Point [X] : " << n_px << " / [Y] : " << n_py << endl;
+    cout << "Point [X:Y] -> " << n_px << ":"<< n_py << endl;
 }
