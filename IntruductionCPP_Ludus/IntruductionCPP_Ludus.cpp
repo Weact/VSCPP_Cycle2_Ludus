@@ -5,7 +5,7 @@
 #include <stdio.h>
 //#include "TPoint.h";
 #include "cPoint.h"
-using namespace std;
+using namespace std; //This is needed to use cout without std:: (or endl, etc..)
 
 int main()
 {
@@ -62,8 +62,29 @@ int main()
 //[END PART 2]
     //NOTE : After this part, the method <void display_point() const; //display point's position> has been modified to work with getters.
 
+//[PART 3]
+#pragma region Part3
+    int n_inX, n_inY;
+        //OUTPUT
+    cout << "\nVeuillez entrer la position X du point" << endl; //Or std::cout
+        //INPUT
+    cin >> n_inX; 
 
+        //OUTPUT
+    cout << "\nVeuillez entrer la position Y du point" << endl; //Or std::cout
+        //INPUT
+    cin >> n_inY;
+
+        //SETTING GETTING AND DISPLAYING POINT
+    cout << endl;
+    cPoint inPoint(n_inX, n_inY); // WITH A CONSTRUCTOR
+    inPoint.display_point(); //DISPLAY ITS COORDINATES
+
+
+#pragma endregion
+//[END PART 3]
 
     cout << endl;
+    cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;
     return 0;
 }
