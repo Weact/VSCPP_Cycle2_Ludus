@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <stdio.h>
+#include <string>
 //#include "TPoint.h";
 #include "cPoint.h"
 using namespace std; //This is needed to use cout without std:: (or endl, etc..)
@@ -21,12 +22,13 @@ int main()
 
     //Objects
 
+//[PART 1]
+#pragma region Part1
+    cout << "\n\n[===== PART 1 =====]\n\n";
         //CREATION
     cPoint myPointA, myPointB; //create 2 points with basic constructor (values init null)
     cPoint mySpecialPoint(50, 35); //create a new point with special constructor
 
-//[PART 1]
-#pragma region Part1
         //SET POSITION
     myPointA.set_position(5, 5); //set pointA's to 5 5
 
@@ -39,6 +41,7 @@ int main()
 
 //[PART 2]
 #pragma region Part2
+    cout << "\n\n[===== PART 2 =====]\n\n";
         //SETTERS
             //SET POINT A; X AND Y
     myPointA.setX(27);
@@ -64,6 +67,7 @@ int main()
 
 //[PART 3]
 #pragma region Part3
+    cout << "\n\n[===== PART 3 =====]\n\n";
     int n_inX, n_inY;
         //OUTPUT
     cout << "\nVeuillez entrer la position X du point" << endl; //Or std::cout
@@ -83,6 +87,22 @@ int main()
 
 #pragma endregion
 //[END PART 3]
+
+//[PART 4]
+#pragma region Part4
+    cout << "\n\n[===== PART 4 =====]\n\n";
+        //NEW POINT CREATION
+    cPoint strPoint(94, 63, "A point with STR Constructor");
+        //DISPLAYING POINT
+    strPoint.display_point();
+        //SETTING GETTING AND DISPLAYING POINT
+    strPoint.setX(10);
+    strPoint.setY(13);
+    strPoint.setSTR("A new string for this point !");
+    strPoint.display_point();
+
+#pragma endregion
+//[END PART 4]
 
     cout << endl;
     cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;

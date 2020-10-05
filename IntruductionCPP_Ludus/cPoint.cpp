@@ -6,16 +6,26 @@ using namespace std;
     //CONSTRUCTOR(S)
 cPoint::cPoint() //default constructor, init to NULL
 {
-    this->n_px = NULL;
-    this->n_py = NULL;
+    this->m_px = NULL;
+    this->m_py = NULL;
+    this->m_str = "DEFAULT";
     cout << "A point has been created !" << endl;
 }
 
 cPoint::cPoint(int x, int y) //constructor init to values
 {
-    this->n_px = x;
-    this->n_py = y;
+    this->m_px = x;
+    this->m_py = y;
+    this->m_str = "DEFAULT";
     cout << "A point has been created and is already initialized !" << endl;
+}
+
+cPoint::cPoint(int x, int y, string str)
+{
+    this->m_px = x;
+    this->m_py = y;
+    this->m_str = str;
+    cout << "A point has been created and is already initialized with string member !" << endl;
 }
     //DESTRUCTOR(S)
 cPoint::~cPoint() //Default destructor
@@ -24,34 +34,44 @@ cPoint::~cPoint() //Default destructor
 }
 
     //SETTERS
-void cPoint::setX(int n_newX)
+void cPoint::setX(int m_newX)
 {
-    this->n_px = n_newX;
+    this->m_px = m_newX;
 }
 
-void cPoint::setY(int n_newY)
+void cPoint::setY(int m_newY)
 {
-    this->n_py = n_newY;
+    this->m_py = m_newY;
+}
+
+void cPoint::setSTR(string m_newSTR)
+{
+    this->m_str = m_newSTR;
 }
 
     //GETTERS
 int cPoint::getX() const
 {
-    return this->n_px;
+    return this->m_px;
 }
 
 int cPoint::getY() const
 {
-    return this->n_py;
+    return this->m_py;
+}
+
+string cPoint::getSTR() const
+{
+    return this->m_str;
 }
 
     //METHODS
 void cPoint::set_position(int x, int y) { //method which init the position values of a point
-    n_px = x;
-    n_py = y;
+    m_px = x;
+    m_py = y;
 }
 
 void cPoint::display_point() const { //display point's position
-    cout << "\n{GETTERS AND SETTERS UPDATE} => Point [X:Y] -> " << getX() << ":" << getY() << endl;
+    cout << "\n{GETTERS AND SETTERS UPDATE} => Point [X:Y] -> " << getX() << ":" << getY() << " <==> STR: " << getSTR() << "." << endl;
 }
 

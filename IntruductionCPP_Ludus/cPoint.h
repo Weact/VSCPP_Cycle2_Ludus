@@ -1,13 +1,17 @@
 #pragma once
 #ifndef CPOINT_H
 #define CPOINT_H
+#include <string>
+
+using namespace std;
 
 class cPoint
 {
 private:
     //DATA MEMBERS
 
-    int n_px, n_py;
+    int m_px, m_py;
+    string m_str;
 
 public:
     //METHOD MEMBERS
@@ -15,6 +19,7 @@ public:
         // CONSTRUCTOR
     cPoint(); //default constructor, init to NULL
     cPoint(int, int); //constructor init to values
+    cPoint(int x, int y, string str); //constructor init to values with string member
 
         //DESTRUCTOR
     ~cPoint(); //default destructor
@@ -24,12 +29,14 @@ public:
     void display_point() const; //display point's position
 
         //SET
-    void setX(int n_newX);
-    void setY(int n_newY);
+    void setX(int m_newX);
+    void setY(int m_newY);
+    void setSTR(string m_newSTR);
 
         //GET
     int getX() const;
     int getY() const;
+    string getSTR() const;
 }; 
 
 #endif // !CPOINT_H
