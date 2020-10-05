@@ -15,7 +15,7 @@ cPoint::cPoint(int x, int y) //constructor init to values
 {
     this->n_px = x;
     this->n_py = y;
-    cout << "A point has been created !" << endl;
+    cout << "A point has been created and is already initialized !" << endl;
 }
     //DESTRUCTOR(S)
 cPoint::~cPoint() //Default destructor

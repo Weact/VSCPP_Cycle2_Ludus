@@ -49,15 +49,15 @@ int main()
 
         //GETTERS
             //GET POINT A; COORDINATES
-    int pointA_X = myPointA.getX();
-    int pointA_Y = myPointA.getY();
+    int n_pointA_X = myPointA.getX();
+    int n_pointA_Y = myPointA.getY();
             //GET POINT B; COORDINATES
-    int pointB_X = myPointB.getX();
-    int pointB_Y = myPointB.getY();
+    int n_pointB_X = myPointB.getX();
+    int n_pointB_Y = myPointB.getY();
 
         //DISPLAY
-    cout << "\n{GETTER AND SETTER} => Point [X:Y] -> " << "[" << pointA_X << ":" << pointA_Y << "]" << endl;
-    cout << "\n{GETTER AND SETTER} => Point [X:Y] -> " << "[" << pointB_X << ":" << pointB_Y << "]" << endl;
+    cout << "\n{GETTERS AND SETTERS} => Point [X:Y] -> " << "[" << n_pointA_X << ":" << n_pointA_Y << "]" << endl;
+    cout << "\n{GETTERS AND SETTERS} => Point [X:Y] -> " << "[" << n_pointB_X << ":" << n_pointB_Y << "]" << endl;
 #pragma endregion
 //[END PART 2]
     //NOTE : After this part, the method <void display_point() const; //display point's position> has been modified to work with getters.
