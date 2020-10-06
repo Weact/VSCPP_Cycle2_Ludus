@@ -6,6 +6,7 @@ class CPoint //classe point
 {
 private:
 		//Private Members/Methods
+	static int cpt;
 	float m_fX;
 	float m_fY;
 
@@ -33,8 +34,10 @@ public:
 	void move_point(float, float);
 	void display_point() const; //THIS METHOD GOT REMOVED FOR THE EXERCICE °63
 	void homothetie(CPoint&, float); // Function with rapport parameter : < void CPoint::homothetie(CPoint, float); >
-	void rotation(CPoint, float);
-	void cartToPol(CPoint&);
+	void rotation(CPoint, float); //Rotate a point according to an origin
+	void cartToPol(CPoint&); //Convert cartesians coordinates to polars
+
+	static int get_cpt(); //Get numbers of created objects
 };
 
 #endif

@@ -4,14 +4,18 @@
 
 using namespace std;
 
+int CPoint::cpt = 0;
+
 CPoint::CPoint(float flt_px, float flt_py)
 {
+	cpt++;
 	this->m_fX = flt_px;
 	this->m_fY = flt_py;
 }
 
 CPoint::~CPoint()
 {
+	cpt--;
 }
 
 void CPoint::setX(float flt_newX)
@@ -73,6 +77,11 @@ void CPoint::cartToPol(CPoint &centre)
 	float t = 2 * atan(fY / (fX + r));
 
 	cout << "Polar coordinate of the following point: [r : t] => (" << r << ", " << t << " deg)" << endl;
+}
+
+int CPoint::get_cpt()
+{
+	return cpt;
 }
 
 /*

@@ -97,6 +97,10 @@ int main()
 
 #pragma endregion
 
+#pragma region EXERCICE_66_COMMIT_
+	cout << "\n\nAMOUNT OF POINTS OBJECTS CREATED : " << CPoint::get_cpt() << " !" << endl;
+#pragma endregion
+
 
 	return 0;
 }
