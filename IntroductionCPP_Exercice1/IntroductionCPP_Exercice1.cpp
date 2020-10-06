@@ -53,11 +53,11 @@ int main()
 	cout << endl;
 #pragma endregion
 
-#pragma region EXERICE_64_COMMIT_76bd0167
+#pragma region EXERICE_64_COMMIT_76bd0167_9ee6d89e
 
 	cout << "EXERCICE 64\n" << endl;
 
-	CPoint centre(0.0f, 0.0f); //On pourrait aussi passer le centre en paramètre de la fonction
+	CPoint centre(5.0f, 5.0f); //On pourrait aussi passer le centre en paramètre de la fonction
 	CPoint pointE(2.0f, 2.0f);
 	float rapport = 4.0f;
 	CPoint EPrime(0.0f, 0.0f);
@@ -65,7 +65,7 @@ int main()
 	EPrime.setY(pointE.ordonne());
 
 		//Image E' du point E par l'homothétie de entre (0, 0) et de rapport 4
-	EPrime.homothetie(rapport);
+	EPrime.homothetie(centre, rapport);
 
 		//Affichage
 	cout << "CENTRE : ";

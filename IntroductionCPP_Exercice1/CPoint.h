@@ -32,7 +32,7 @@ public:
 			//METHODS
 	void move_point(float, float);
 	void display_point() const; //THIS METHOD GOT REMOVED FOR THE EXERCICE °63
-	void homothetie(float); // Function with rapport parameter : < void CPoint::homothetie(CPoint, float); >
+	void homothetie(CPoint&, float); // Function with rapport parameter : < void CPoint::homothetie(CPoint, float); >
 	void rotation(CPoint, float);
 	void cartToPol(CPoint&);
 };

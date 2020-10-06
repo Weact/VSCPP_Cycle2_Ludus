@@ -40,10 +40,10 @@ void CPoint::move_point(float flt_pAddX, float flt_pAddY)
 	this->m_fY += flt_pAddY;
 }
 
-void CPoint::homothetie(float flt_rapport)
+void CPoint::homothetie(CPoint &centre, float flt_rapport)
 {
-	this->m_fX *= flt_rapport;
-	this->m_fY *= flt_rapport;
+	this->m_fX = (this->m_fX - centre.m_fX) * flt_rapport + centre.m_fX;
+	this->m_fY = (this->m_fY - centre.m_fY) * flt_rapport + centre.m_fY;
 }
 
 void CPoint::rotation(CPoint centre, float flt_angle)
