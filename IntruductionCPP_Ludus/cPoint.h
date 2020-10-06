@@ -9,7 +9,7 @@ class cPoint
 {
 private:
     //DATA MEMBERS
-
+    static int cpt;
     int m_px, m_py;
     string m_str;
     //char* m_strChar;
@@ -20,7 +20,7 @@ public:
         // CONSTRUCTOR
     cPoint(); //default constructor, init to NULL
     cPoint(int, int); //constructor init to values
-    cPoint(int x, int y, string str); //constructor init to values with string member
+    cPoint(int x, int y, string str);//constructor init to values with string member
 
         //DESTRUCTOR
     ~cPoint(); //default destructor
@@ -41,6 +41,8 @@ public:
     int getX() const;
     int getY() const;
     string getSTR() const;
+
+    static int val_cpt();
 }; 
 
 #endif // !CPOINT_H

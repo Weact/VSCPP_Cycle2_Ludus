@@ -9,7 +9,7 @@
 
 using namespace std; //This is needed to use cout without std:: (or endl, etc..)
 
-const int TAILLE = 100;
+const int TAILLE = 5;
 
 void swap_point(cPoint&, cPoint&);
 
@@ -115,9 +115,9 @@ int main()
 
         //POINTS ARRAY CREATION [100]
     cPoint basePoint(0, 0, "BasePoint");
-    cPoint tabPoints[100];
+    cPoint tabPoints[TAILLE];
     
-    for (int i = 0; i < 100; i++)
+    for (int i = 0; i < TAILLE; i++)
     {
         tabPoints[i].setX(basePoint.getX()+i);
         tabPoints[i].setY(basePoint.getY()+i*2);
@@ -185,7 +185,7 @@ int main()
 //[PART 9]
 #pragma region Part9
     cout << "\n\n[===== PART 9 =====]\n\n";
-    /*
+    
     //Point Creation
     cPoint pointBase(5, 5, "Base Point");
     cPoint* ptabPoint = new cPoint[TAILLE]; //malloc(100*sizeof(cPoint));
@@ -194,13 +194,16 @@ int main()
         ptabPoint[i] = pointBase;
     }
 
-    delete[] tabPoints;
-    */
+    cout << "Objets Points: " << cPoint::val_cpt();
+    delete [] ptabPoint;
+    
+    
 #pragma endregion
     //[END PART 9]
 
     cout << endl;
     //cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;
+    cout << "Objets Points: " << cPoint::val_cpt();
     return 0;
 }
 

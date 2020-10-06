@@ -3,9 +3,12 @@
 #include "cPoint.h"
 using namespace std;
 
+int cPoint::cpt = 0;
+
     //CONSTRUCTOR(S)
 cPoint::cPoint() //default constructor, init to NULL
 {
+    cpt++;
     this->m_px = NULL;
     this->m_py = NULL;
     this->m_str = "DEFAULT";
@@ -16,6 +19,7 @@ cPoint::cPoint() //default constructor, init to NULL
 
 cPoint::cPoint(int x, int y) //constructor init to values
 {
+    cpt++;
     this->m_px = x;
     this->m_py = y;
     this->m_str = "DEFAULT";
@@ -26,6 +30,7 @@ cPoint::cPoint(int x, int y) //constructor init to values
 
 cPoint::cPoint(int x, int y, string str)
 {
+    cpt++;
     this->m_px = x;
     this->m_py = y;
     this->m_str = str;
@@ -34,6 +39,7 @@ cPoint::cPoint(int x, int y, string str)
     //DESTRUCTOR(S)
 cPoint::~cPoint() //Default destructor
 {
+    cpt--;
     //cout << "A point has been destroyed !" << endl;
 }
 
@@ -69,6 +75,11 @@ string cPoint::getSTR() const
     return this->m_str;
 }
 
+int cPoint::val_cpt()
+{
+    return cpt;
+}
+
     //METHODS
 void cPoint::set_position(int x, int y) { //method which init the position values of a point
     m_px = x;
@@ -88,7 +99,7 @@ bool cPoint::check_points_equal(cPoint &pointToCompare)
 {
     return (m_px == pointToCompare.m_px && m_py == pointToCompare.m_py);
 }
-
+  
 /*
 *   void swapPoint(cPoint*, cPoint*);
 *   void swapPoint(cPoint& p_a, cPoint& p_b)
