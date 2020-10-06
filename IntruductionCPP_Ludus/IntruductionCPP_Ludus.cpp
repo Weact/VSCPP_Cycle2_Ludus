@@ -142,9 +142,24 @@ int main()
 
 
 #pragma endregion
-    //[END PART 6]
+//[END PART 6]
+
+//[PART 7]
+#pragma region Part7
+    cout << "\n\n[===== PART 7 =====]\n\n";
+
+        //Point Creation
+    cPoint pointCompare1(5, 5, "Point 1 to Compare"), pointCompare2(10, 10, "Point 2 to Compare"); //Creation of 2 different point
+        //Compare and display
+    cout << "Points are Equals ? ==> " << pointCompare1.check_points_equal(pointCompare2) << " <==" << endl; //Display if the points are equal or not (1 = TRUE ; 0 = FALSE)
+        //Set position
+    pointCompare1.set_position(10, 10);
+        //Compare and display
+    cout << "Points are Equals ? ==> " << pointCompare1.check_points_equal(pointCompare2) << " <==" << endl; //Display if the points are equal or not (1 = TRUE ; 0 = FALSE)
+#pragma endregion
+//[END PART 7]
 
     cout << endl;
-    cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;
+    //cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;
     return 0;
 }

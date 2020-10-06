@@ -28,6 +28,7 @@ public:
     void set_position(int, int); //method which init the position values of a point
     void display_point() const; //display point's position
     void move_point(int, int); //move a given point
+    bool check_points_equal(cPoint);
 
         //SET
     void setX(int m_newX);

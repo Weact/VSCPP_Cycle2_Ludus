@@ -30,7 +30,7 @@ cPoint::cPoint(int x, int y, string str)
     //DESTRUCTOR(S)
 cPoint::~cPoint() //Default destructor
 {
-    cout << "A point has been destroyed !" << endl;
+    //cout << "A point has been destroyed !" << endl;
 }
 
     //SETTERS
@@ -78,4 +78,9 @@ void cPoint::display_point() const { //display point's position
 void cPoint::move_point(int add_x, int add_y) {
     m_px += add_x;
     m_py += add_y;
+}
+
+bool cPoint::check_points_equal(cPoint pointToCompare)
+{
+    return (m_px == pointToCompare.m_px && m_py == pointToCompare.m_py);
 }
