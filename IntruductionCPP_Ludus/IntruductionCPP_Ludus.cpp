@@ -4,10 +4,14 @@
 #include <iostream>
 #include <stdio.h>
 #include <string>
-//#include "TPoint.h";
 #include "cPoint.h";
+//#include "TPoint.h";
 
 using namespace std; //This is needed to use cout without std:: (or endl, etc..)
+
+const int TAILLE = 100;
+
+void swap_point(cPoint&, cPoint&);
 
 int main()
 {
@@ -159,7 +163,50 @@ int main()
 #pragma endregion
 //[END PART 7]
 
+//[PART 8]
+#pragma region Part8
+    cout << "\n\n[===== PART 8 =====]\n\n";
+
+    //Point Creation
+    cPoint rPoint1(15, 20, "Pointer of Reversed Point 1"); //Creating the first Point, this is the one we will reverse with the second Point
+    cPoint rPoint2(30, 45, "Pointer of Reversed Point 2"); //Creating the second Point, this is the one the values will be taken
+
+    rPoint1.display_point();
+    rPoint2.display_point();
+
+    swap(rPoint1, rPoint2);
+
+    rPoint1.display_point();
+    rPoint2.display_point();
+
+#pragma endregion
+//[END PART 8]
+
+//[PART 9]
+#pragma region Part9
+    cout << "\n\n[===== PART 9 =====]\n\n";
+    /*
+    //Point Creation
+    cPoint pointBase(5, 5, "Base Point");
+    cPoint* ptabPoint = new cPoint[TAILLE]; //malloc(100*sizeof(cPoint));
+    for (int i = 0; i < TAILLE; i++)
+    {
+        ptabPoint[i] = pointBase;
+    }
+
+    delete[] tabPoints;
+    */
+#pragma endregion
+    //[END PART 9]
+
     cout << endl;
     //cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;
     return 0;
+}
+
+void swap_point(cPoint& p_a, cPoint& p_b) {
+    cPoint pointTemp;
+    pointTemp.operator=(p_a);
+    p_a.operator=(p_b);
+    p_b.operator=(pointTemp);
 }

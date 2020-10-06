@@ -12,6 +12,7 @@ private:
 
     int m_px, m_py;
     string m_str;
+    //char* m_strChar;
 
 public:
     //METHOD MEMBERS
@@ -29,6 +30,7 @@ public:
     void display_point() const; //display point's position
     void move_point(int, int); //move a given point
     bool check_points_equal(cPoint &p); //check if two points are equals
+
 
         //SET
     void setX(int m_newX);
