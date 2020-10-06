@@ -26,13 +26,15 @@ public:
 	void setY(float m_newY);
 
 			//GETTERS
-	float getX() const; //Fonction abscisse (EX 63)
-	float getY() const; //Fonction ordonnée (EX 63)
+	float abscisse() const;
+	float ordonne() const;
 
 			//METHODS
 	void move_point(float, float);
-	//void display_point() const; THIS METHOD GOT REMOVED FOR THE EXERCICE °63
-
+	void display_point() const; //THIS METHOD GOT REMOVED FOR THE EXERCICE °63
+	void homothetie(float); // Function with rapport parameter : < void CPoint::homothetie(CPoint, float); >
+	void rotation(CPoint, float);
+	void cartToPol();
 };
 
 #endif
