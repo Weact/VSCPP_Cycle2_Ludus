@@ -26,12 +26,12 @@ public:
 	void setY(float m_newY);
 
 			//GETTERS
-	float getX() const;
-	float getY() const;
+	float getX() const; //Fonction abscisse (EX 63)
+	float getY() const; //Fonction ordonnée (EX 63)
 
 			//METHODS
 	void move_point(float, float);
-	void display_point() const;
+	//void display_point() const; THIS METHOD GOT REMOVED FOR THE EXERCICE °63
 
 };
 
