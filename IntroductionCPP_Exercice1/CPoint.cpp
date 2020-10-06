@@ -38,7 +38,7 @@ float CPoint::ordonne() const //Fonction ordonnée (EX 63)
 	return this->m_fY;
 }
 
-void CPoint::move_point(float flt_pAddX, float flt_pAddY)
+void CPoint::move_point(float flt_pAddX, float flt_pAddY) //Move the point by X:Y
 {
 	this->m_fX += flt_pAddX;
 	this->m_fY += flt_pAddY;
@@ -50,7 +50,7 @@ void CPoint::homothetie(CPoint &centre, float flt_rapport)
 	this->m_fY = (this->m_fY - centre.m_fY) * flt_rapport + centre.m_fY;
 }
 
-void CPoint::rotation(CPoint centre, float flt_angle)
+void CPoint::rotation(CPoint centre, float flt_angle) //Rotate a point around an origin
 {
 
 	flt_angle =  3.14159f * flt_angle / 180;
@@ -68,7 +68,7 @@ void CPoint::rotation(CPoint centre, float flt_angle)
 	this->m_fY = flt_ynew + centre.m_fY;
 }
 
-void CPoint::cartToPol(CPoint &centre)
+void CPoint::cartToPol(CPoint &centre) //Convert a point cartesian coordinate to polar coordinate
 {
 	float fX = this->m_fX - centre.m_fX;
 	float fY = this->m_fY - centre.m_fY;
