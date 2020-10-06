@@ -75,3 +75,7 @@ void cPoint::display_point() const { //display point's position
     cout << "\n{GETTERS AND SETTERS UPDATE} => Point [X:Y] -> " << getX() << ":" << getY() << " <==> STR: " << getSTR() << "." << endl;
 }
 
+void cPoint::move_point(int add_x, int add_y) {
+    m_px += add_x;
+    m_py += add_y;
+}

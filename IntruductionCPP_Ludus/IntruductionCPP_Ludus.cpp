@@ -5,7 +5,8 @@
 #include <stdio.h>
 #include <string>
 //#include "TPoint.h";
-#include "cPoint.h"
+#include "cPoint.h";
+
 using namespace std; //This is needed to use cout without std:: (or endl, etc..)
 
 int main()
@@ -122,6 +123,26 @@ int main()
     }
 #pragma endregion
 //[END PART 5]
+
+//[PART 6]
+#pragma region Part6
+    cout << "\n\n[===== PART 6 =====]\n\n";
+
+        //Point Creation
+    cPoint movablePoint(10, 10, "I am a Movable Point !");
+        //Display
+    movablePoint.display_point(); //We display the current point's informations (coordinate and str)
+        //Move
+    movablePoint.move_point(10, 10); //We move the point from x10 y10 to x20 y20 (+10 ; +10)
+            //Note that this method is different from the set_position(int, int); method.
+            //This one will increase point's x and y properties by N values (method paramaters), when set_position(int ,int); method will set the X and Y according to given parameters.
+
+        //Display
+    movablePoint.display_point(); //Display point again
+
+
+#pragma endregion
+    //[END PART 6]
 
     cout << endl;
     cout << "\n=====OBJECTS DESTRUCTOR=====\n" << endl;
