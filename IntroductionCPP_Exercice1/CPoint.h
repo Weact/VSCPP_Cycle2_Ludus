@@ -6,8 +6,8 @@ class CPoint //classe point
 {
 private:
 		//Private Members/Methods
-	float m_x;
-	float m_y;
+	float m_fX;
+	float m_fY;
 
 protected:
 		//Protected Members/Methods
@@ -34,7 +34,7 @@ public:
 	void display_point() const; //THIS METHOD GOT REMOVED FOR THE EXERCICE °63
 	void homothetie(float); // Function with rapport parameter : < void CPoint::homothetie(CPoint, float); >
 	void rotation(CPoint, float);
-	void cartToPol();
+	void cartToPol(CPoint&);
 };
 
 #endif

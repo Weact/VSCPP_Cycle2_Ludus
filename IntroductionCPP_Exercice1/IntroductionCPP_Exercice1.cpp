@@ -53,7 +53,7 @@ int main()
 	cout << endl;
 #pragma endregion
 
-#pragma region EXERICE_64_COMMIT_
+#pragma region EXERICE_64_COMMIT_76bd0167
 
 	cout << "EXERCICE 64\n" << endl;
 
@@ -86,13 +86,16 @@ int main()
 
 	cout << "\nPOLAR COORDINATE\n" << endl;
 	cout << "EPrime Polar Coordinate: " << endl;
-	EPrime.cartToPol();
+	EPrime.cartToPol(centre);
 
 	cout << "\nE Polar Coordinate: " << endl;
-	pointE.cartToPol();
+	pointE.cartToPol(centre);
 
 #pragma endregion
 
+#pragma region EXERCICE_65_COMMIT_
+
+#pragma endregion
 
 
 	return 0;
