@@ -42,13 +42,18 @@ int main()
 
 #pragma endregion
    
-#pragma region EXERCICE_71_COMMIT_4cc545d6_a35a3dd0
+#pragma region EXERCICE_71_COMMIT_4cc545d6_a35a3dd0_55c4bb10
     //WE USE PREVIOUSLY CREATED VECTORS
     v1.normaxVal(2.0f, 1.0f, 4.0f).display_vector(); //a) v1 norm compared to values
     v1.normaxAdr(&v2)->display_vector(); //b) v1 compared to v2 by adr
     v1.normaxRef(v2).display_vector(); //c) v1 compared to v2 by ref
 #pragma endregion
 
+#pragma region EXERCICE_72_COMMIT_
+    //Using previous vectors again
+    cout << "Computing Vector 1 and Vector 2.. Result : " << v1.computeVectors(v2) << " !" << endl;
+    cout << "Scalar Product of Vector 1 and Vector 2.. Result : " << v1.scalVectors(v2) << " !" << endl;
+#pragma endregion
 
 
     return 0;

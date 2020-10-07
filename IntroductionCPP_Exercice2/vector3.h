@@ -17,7 +17,7 @@ public:
 
 	Vector3();
 	Vector3(float, float, float);
-	//Vector3(float x, float y, float z) { mflt_X = x; mflt_Y = y; mflt_Z = z; }
+	//Vector3(float x = 0.0f, float y = 0.0f, float z = 0.0f) { mflt_X = x; mflt_Y = y; mflt_Z = z; }
 	
 	//DESTRUCTOR(S)
 	~Vector3();
@@ -39,7 +39,7 @@ public:
 	Vector3 getVector();
 
 		//CLASS METHODS
-	void display_vector();
+	void display_vector(); //This method fits for the exercice 72
 	void coincideVal(float, float, float);
 	void coincideAdr(Vector3*);
 	void coincideRef(Vector3&);
@@ -47,6 +47,9 @@ public:
 	Vector3 normaxVal(float, float, float);
 	Vector3* normaxAdr(Vector3*);
 	Vector3& normaxRef(Vector3&);
+
+	float computeVectors(Vector3&);
+	float scalVectors(Vector3&);
 };
 
 //INLINE METHOD OF <setVector3IN>

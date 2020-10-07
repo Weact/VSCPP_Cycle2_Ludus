@@ -60,7 +60,7 @@ Vector3 Vector3::getVector()
 	return *this;
 }
 
-void Vector3::display_vector()
+void Vector3::display_vector() //This method fits for the exercice 72
 {
 	cout << "The corresponding vector coordinate is : [X : " << this->getX() << "] ; [Y : " << this->getY() << "] ; [Z : " << this->getZ() << "].\n" << endl;
 }
@@ -155,4 +155,21 @@ Vector3& Vector3::normaxRef(Vector3& v)
 			return v;
 		}
 	}
+}
+
+float Vector3::computeVectors(Vector3& v2)
+{
+	float length_v1 = sqrt(pow(this->mflt_X, 2) + pow(this->mflt_Y, 2) + pow(this->mflt_Z, 2));
+	float length_v2 = sqrt(pow(v2.mflt_X, 2) + pow(v2.mflt_Y, 2) + pow(v2.mflt_Z, 2));
+
+	return (length_v1 + length_v2);
+	// TODO: insérer une instruction return ici
+}
+
+float Vector3::scalVectors(Vector3& v2)
+{
+	//xx’ + yy’ + zz’
+	float scal = (this->mflt_X * v2.mflt_X) + (this->mflt_Y * v2.mflt_Y) + (this->mflt_Z * v2.mflt_Z);
+
+	return scal;
 }
