@@ -1,7 +1,6 @@
 #pragma once
 #ifndef VECTOR3_H
 #define VECTOR3_H
-
 class Vector3
 {
 private:
@@ -18,6 +17,7 @@ public:
 
 	Vector3();
 	Vector3(float, float, float);
+	//Vector3(float x, float y, float z) { mflt_X = x; mflt_Y = y; mflt_Z = z; }
 	
 	//DESTRUCTOR(S)
 	~Vector3();
@@ -43,6 +43,10 @@ public:
 	void coincideVal(float, float, float);
 	void coincideAdr(Vector3*);
 	void coincideRef(Vector3&);
+
+	float normaxVal(float, float, float);
+	float normaxAdr(Vector3*);
+	float normaxRef(Vector3&);
 };
 
 //INLINE METHOD OF <setVector3IN>
