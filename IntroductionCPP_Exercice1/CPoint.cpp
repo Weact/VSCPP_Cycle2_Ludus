@@ -1,6 +1,10 @@
 #include "CPoint.h"
 #include <iostream>
+
+#define _USE_MATH_DEFINES
 #include <math.h>
+
+
 
 using namespace std;
 
@@ -11,6 +15,9 @@ CPoint::CPoint(float flt_px, float flt_py)
 	cpt++;
 	this->m_fX = flt_px;
 	this->m_fY = flt_py;
+
+	//this->m_fX = sqrt((flt_px * flt_px) + (flt_py * flt_py));
+	//this->m_fY = 2 * atan(flt_py / (flt_px + m_fX));
 }
 
 CPoint::~CPoint()
@@ -53,7 +60,7 @@ void CPoint::homothetie(CPoint &centre, float flt_rapport)
 void CPoint::rotation(CPoint centre, float flt_angle) //Rotate a point around an origin
 {
 
-	flt_angle =  3.14159f * flt_angle / 180;
+	flt_angle =  3.14159f * flt_angle / 180; //conversion deg to rad
 
 	float s = sin(flt_angle);
 	float c = cos(flt_angle);
@@ -68,13 +75,54 @@ void CPoint::rotation(CPoint centre, float flt_angle) //Rotate a point around an
 	this->m_fY = flt_ynew + centre.m_fY;
 }
 
-void CPoint::cartToPol(CPoint &centre) //Convert a point cartesian coordinate to polar coordinate
+float CPoint::rho()
 {
-	float fX = this->m_fX - centre.m_fX;
-	float fY = this->m_fY - centre.m_fY;
+	return sqrt( (this->m_fX*this->m_fX) + (this->m_fY*this->m_fY) );
+}
 
-	float r = sqrt((fX * fX) + (fY * fY));
-	float t = 2 * atan(fY / (fX + r));
+float CPoint::theta()
+{
+	float th = 0.0f;
+
+	if (this->m_fX > 0) {
+		th = atan(this->m_fY / this->m_fX);
+	}
+	else
+	{
+		if (this->m_fX < 0)
+		{
+			if (this->m_fY >= 0) {
+				th = atan( (this->m_fY / this->m_fX) + M_PI);
+			}
+			else {
+				th = atan((this->m_fY / this->m_fX) - M_PI);
+			}
+		}
+		else
+		{
+			if (this->m_fX == 0)
+			{
+				if (this->m_fY > 0)
+				{
+					th = M_PI / 2;
+				}
+				else
+				{
+					th = -(M_PI / 2);
+				}
+			}
+		}
+	}
+	
+	th *= 180 / M_PI;
+
+	return th;
+}
+
+void CPoint::cartToPol() //Convert a point cartesian coordinate to polar coordinate
+{
+	float r = CPoint::rho();
+	float t = CPoint::theta();
 
 	cout << "Polar coordinate of the following point: [r : t] => (" << r << ", " << t << " deg)" << endl;
 }

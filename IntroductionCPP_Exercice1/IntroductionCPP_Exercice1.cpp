@@ -57,9 +57,9 @@ int main()
 
 	cout << "EXERCICE 64\n" << endl;
 
-	CPoint centre(5.0f, 5.0f); //On pourrait aussi passer le centre en paramètre de la fonction
+	CPoint centre(0.0f,0.0f); //On pourrait aussi passer le centre en paramètre de la fonction
 	CPoint pointE(2.0f, 2.0f);
-	float rapport = 4.0f;
+	float rapport = 1.0f;
 	CPoint EPrime(0.0f, 0.0f);
 	EPrime.setX(pointE.abscisse());
 	EPrime.setY(pointE.ordonne());
@@ -86,10 +86,10 @@ int main()
 
 	cout << "\nPOLAR COORDINATE\n" << endl;
 	cout << "EPrime Polar Coordinate: " << endl;
-	EPrime.cartToPol(centre);
+	EPrime.cartToPol();
 
 	cout << "\nE Polar Coordinate: " << endl;
-	pointE.cartToPol(centre);
+	pointE.cartToPol();
 
 #pragma endregion
 

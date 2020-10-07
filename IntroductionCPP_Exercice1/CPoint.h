@@ -35,7 +35,10 @@ public:
 	void display_point() const; //THIS METHOD GOT REMOVED FOR THE EXERCICE °63
 	void homothetie(CPoint&, float); // Function with rapport parameter : < void CPoint::homothetie(CPoint, float); >
 	void rotation(CPoint, float); //Rotate a point according to an origin
-	void cartToPol(CPoint&); //Convert cartesians coordinates to polars
+	float rho();
+	float theta();
+	void cartToPol(); //Convert cartesians coordinates to polars
+
 
 	static int get_cpt(); //Get numbers of created objects
 };
