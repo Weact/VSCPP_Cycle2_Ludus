@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-#pragma region EXERCICE_69_COMMIT_
+#pragma region EXERCICE_69_COMMIT_c7149ad0
 
     // Vector Declaration
     Vector3 myVector;
