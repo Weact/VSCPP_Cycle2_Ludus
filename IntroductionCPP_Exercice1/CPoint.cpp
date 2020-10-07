@@ -83,7 +83,7 @@ float CPoint::rho()
 float CPoint::theta()
 {
 	float th = 0.0f;
-
+	/*
 	if (this->m_fX > 0) {
 		th = atan(this->m_fY / this->m_fX);
 	}
@@ -113,7 +113,9 @@ float CPoint::theta()
 			}
 		}
 	}
-	
+	*/
+
+	th = 2 * atan(this->m_fY / (this->m_fX + rho()));
 	th *= 180 / M_PI;
 
 	return th;

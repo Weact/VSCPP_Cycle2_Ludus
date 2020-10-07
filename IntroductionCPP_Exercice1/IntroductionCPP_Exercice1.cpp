@@ -53,13 +53,13 @@ int main()
 	cout << endl;
 #pragma endregion
 
-#pragma region EXERICE_64_COMMIT_76bd0167_9ee6d89e_91bd7bcb
+#pragma region EXERICE_64_COMMIT_76bd0167_9ee6d89e_91bd7bcb_bc807a4c
 
 	cout << "EXERCICE 64\n" << endl;
 
 	CPoint centre(0.0f,0.0f); //On pourrait aussi passer le centre en paramètre de la fonction
-	CPoint pointE(2.0f, 2.0f);
-	float rapport = 1.0f;
+	CPoint pointE(3.0f, 3.0f);
+	float rapport = 4.5f;
 	CPoint EPrime(0.0f, 0.0f);
 	EPrime.setX(pointE.abscisse());
 	EPrime.setY(pointE.ordonne());
@@ -79,9 +79,7 @@ int main()
 
 	cout << "ROTATION" << endl;
 
-	EPrime.rotation(centre, 45.0f);
-	EPrime.display_point();
-	EPrime.rotation(centre, 45.0f);
+	EPrime.rotation(centre, 90.0f);
 	EPrime.display_point();
 
 	cout << "\nPOLAR COORDINATE\n" << endl;
