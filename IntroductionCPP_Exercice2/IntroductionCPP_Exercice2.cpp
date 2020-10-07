@@ -28,14 +28,21 @@ int main()
     cout << "Vector3 n3 (with inline method) ===>" << endl;
     myInlineVector.setVector3IN(5.0f, 5.0f, 5.0f);
     myInlineVector.display_vector();
+#pragma endregion
 
+#pragma region EXERCICE_70_COMMIT_6cbbec8c
+    //VECTORS CREATION
     Vector3 v1(1.0f, 1.0f, 1.0f);
     Vector3 v2(1.0f, 1.0f, 1.0f);
-    v1.coincideVal(1.0f, 1.0f, 1.0f);
-    v1.coincideAdr(&v2);
-    v1.coincideRef(v2);
+
+    //COMPARE
+    v1.coincideVal(1.0f, 1.0f, 1.0f); //a)
+    v1.coincideAdr(&v2); //b)
+    v1.coincideRef(v2); //c)
 
 #pragma endregion
+    
+
 
     return 0;
 }
