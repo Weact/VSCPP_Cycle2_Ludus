@@ -49,7 +49,7 @@ int main()
     v1.normaxRef(v2).display_vector(); //c) v1 compared to v2 by ref
 #pragma endregion
 
-#pragma region EXERCICE_72_COMMIT_
+#pragma region EXERCICE_72_COMMIT_1ae67931
     //Using previous vectors again
     cout << "Computing Vector 1 and Vector 2.. Result : " << v1.computeVectors(v2) << " !" << endl;
     cout << "Scalar Product of Vector 1 and Vector 2.. Result : " << v1.scalVectors(v2) << " !" << endl;
