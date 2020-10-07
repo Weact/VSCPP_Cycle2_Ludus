@@ -36,8 +36,13 @@ public:
 	float getY();
 	float getZ();
 
+	Vector3 getVector();
+
 		//CLASS METHODS
 	void display_vector();
+	void coincideVal(float, float, float);
+	void coincideAdr(Vector3*);
+	void coincideRef(Vector3&);
 };
 
 //INLINE METHOD OF <setVector3IN>
