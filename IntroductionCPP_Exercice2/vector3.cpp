@@ -115,27 +115,27 @@ float Vector3::normaxVal(float flt_x, float flt_y, float flt_z) {
 	}
 }
 
-float Vector3::normaxAdr(Vector3* v) {
+float* Vector3::normaxAdr(Vector3* v) {
 	float norme_v1 = sqrt(pow(this->mflt_X, 2) + pow(this->mflt_Y, 2) + pow(this->mflt_Z, 2));
 	float norme_v2 = sqrt(pow(v->mflt_X, 2) + pow(v->mflt_Y, 2) + pow(v->mflt_Z, 2));
 
 	if (norme_v1 > norme_v2) {
 		cout << "\nFirst Vector has the highest Norm : ";
-		return norme_v1;
+		return &norme_v1;
 	}
 	else {
 		if (norme_v1 == norme_v2) {
 			cout << "\nThey have the same Norm : ";
-			return norme_v1;
+			return &norme_v1;
 		}
 		else {
 			cout << "\nSecond Vector has the highest Norm : ";
-			return norme_v2;
+			return &norme_v2;
 		}
 	}
 }
 
-float Vector3::normaxRef(Vector3& v)
+float& Vector3::normaxRef(Vector3& v)
 {
 	//sqrt(x² + y² + z²).
 	float norme_v1 = sqrt(pow(this->mflt_X, 2) + pow(this->mflt_Y, 2) + pow(this->mflt_Z, 2));

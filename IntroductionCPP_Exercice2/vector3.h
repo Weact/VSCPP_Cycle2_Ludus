@@ -45,8 +45,8 @@ public:
 	void coincideRef(Vector3&);
 
 	float normaxVal(float, float, float);
-	float normaxAdr(Vector3*);
-	float normaxRef(Vector3&);
+	float* normaxAdr(Vector3*);
+	float& normaxRef(Vector3&);
 };
 
 //INLINE METHOD OF <setVector3IN>

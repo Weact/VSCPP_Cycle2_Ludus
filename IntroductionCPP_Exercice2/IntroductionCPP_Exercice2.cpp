@@ -42,7 +42,7 @@ int main()
 
 #pragma endregion
    
-#pragma region EXERCICE_71_COMMIT_
+#pragma region EXERCICE_71_COMMIT_4cc545d6
     //WE USE PREVIOUSLY CREATED VECTORS
     cout << v1.normaxVal(5.0f, 7.3f, 9.5431f) << endl; //a) v1 norm compared to values
     cout << v1.normaxAdr(&v2) << endl; //b) v1 compared to v2 by adr
