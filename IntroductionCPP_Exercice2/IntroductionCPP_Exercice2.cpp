@@ -32,8 +32,8 @@ int main()
 
 #pragma region EXERCICE_70_COMMIT_6cbbec8c
     //VECTORS CREATION
-    Vector3 v1(1.0f, 3.0f, 1.0f);
-    Vector3 v2(1.0f, 1.0f, 1.0f);
+    Vector3 v1(4.0f, 7.0f, 8.0f);
+    Vector3 v2(7.0f, 16.0f, 4.0f);
 
     //COMPARE
     v1.coincideVal(1.0f, 3.0f, 1.0f); //a) v1 compared to values
@@ -42,11 +42,11 @@ int main()
 
 #pragma endregion
    
-#pragma region EXERCICE_71_COMMIT_4cc545d6
+#pragma region EXERCICE_71_COMMIT_4cc545d6_a35a3dd0
     //WE USE PREVIOUSLY CREATED VECTORS
-    cout << v1.normaxVal(5.0f, 7.3f, 9.5431f) << endl; //a) v1 norm compared to values
-    cout << v1.normaxAdr(&v2) << endl; //b) v1 compared to v2 by adr
-    cout << v1.normaxRef(v2) << endl; //c) v1 compared to v2 by ref
+    v1.normaxVal(2.0f, 1.0f, 4.0f).display_vector(); //a) v1 norm compared to values
+    v1.normaxAdr(&v2)->display_vector(); //b) v1 compared to v2 by adr
+    v1.normaxRef(v2).display_vector(); //c) v1 compared to v2 by ref
 #pragma endregion
 
 
