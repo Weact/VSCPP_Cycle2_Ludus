@@ -1,5 +1,6 @@
 #include <iostream>
 #include "vector3.h"
+#include "CPoint.h"
 
 using namespace std;
 
@@ -54,6 +55,27 @@ int main()
     cout << "Computing Vector 1 and Vector 2.. Result : " << v1.computeVectors(v2) << " !" << endl;
     cout << "Scalar Product of Vector 1 and Vector 2.. Result : " << v1.scalVectors(v2) << " !" << endl;
 #pragma endregion
+
+#pragma region EXERCICE_73_COMMIT_
+    cout << "\n\n";
+    //Creating 4 points, displaying nb, destroying 1 point, displaying nb
+
+    CPoint point1(5.0f, 5.0f), point2(3.0f, 3.0f), point3(9.5, 9.5);
+    point1.display_point();
+    point2.display_point();
+    point3.display_point();
+    CPoint::nombre();
+
+    CPoint* myPoint = new CPoint;
+    myPoint->set_coords(5.0f, 5.0f);
+    myPoint->display_point();
+
+    cout << "Points : " << CPoint::nombre() << endl;
+    delete myPoint;
+    cout << "Points : " << CPoint::nombre() << endl;
+
+#pragma endregion
+
 
 
     return 0;
