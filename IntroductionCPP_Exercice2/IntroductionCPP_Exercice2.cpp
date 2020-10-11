@@ -56,7 +56,7 @@ int main()
     cout << "Scalar Product of Vector 1 and Vector 2.. Result : " << v1.scalVectors(v2) << " !" << endl;
 #pragma endregion
 
-#pragma region EXERCICE_73_COMMIT_
+#pragma region EXERCICE_73_COMMIT_a8bf37a0
     cout << "\n\n";
     //Creating 4 points, displaying nb, destroying 1 point, displaying nb
 
