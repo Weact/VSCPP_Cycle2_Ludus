@@ -9,6 +9,7 @@ int CPoint::nb = 0;
 //BASIC CONSTRUCTOR
 CPoint::CPoint()
 {
+	cout << "A point has been created successfully !\n" << endl;
 	nb++;
 	this->m_fltX = NULL;
 	this->m_fltY = NULL;
@@ -16,6 +17,7 @@ CPoint::CPoint()
 //CONSTRUCTOR WITH PARAMETER
 CPoint::CPoint(int flt_X, int flt_Y)
 {
+	cout << "A point has been created successfully !\n" << endl;
 	nb++;
 	this->m_fltX = flt_X;
 	this->m_fltY = flt_Y;
@@ -23,6 +25,7 @@ CPoint::CPoint(int flt_X, int flt_Y)
 //DESTRUCTOR
 CPoint::~CPoint()
 {
+	cout << "A point has been destroyed successfully !\n" << endl;
 	nb--;
 }
 //SETTERS

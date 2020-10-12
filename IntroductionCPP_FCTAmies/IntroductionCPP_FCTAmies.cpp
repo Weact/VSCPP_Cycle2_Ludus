@@ -6,14 +6,19 @@ using namespace std;
 
 int main()
 {
-#pragma region EXERCISE_80_COMMIT_
-    CPoint myPoint(3, 4);
-    CPoint myPoint2(9, 3);
-
+#pragma region EXERCISE_80_COMMIT_3d8d9a67
     CAffiche aff;
 
-    aff.affiche(myPoint);
-    aff.affiche(myPoint2);
+    CPoint myPointAuto(3, 4); //"Point de classe Automatique"
+
+    CPoint* myPointDyna = new CPoint; //"Point de classe Dynamique"
+    myPointDyna->setX(5);
+    myPointDyna->setY(9);
+
+    aff.affiche(myPointAuto);
+    aff.affiche(*myPointDyna);
+
+    delete myPointDyna;
 #pragma endregion
 
 

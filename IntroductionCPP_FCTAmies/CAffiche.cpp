@@ -6,10 +6,12 @@ using namespace std;
 
 CAffiche::CAffiche()
 {
+	cout << "A displayer has been created successfully !\n" << endl;
 }
 
 CAffiche::~CAffiche()
 {
+	cout << "A displayer has been destroyed successfully !\n" << endl;
 }
 
 void CAffiche::affiche(CPoint& pt)
