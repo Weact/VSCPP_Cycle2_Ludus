@@ -1,5 +1,5 @@
 #include <iostream>
-#include "vector3.h"
+#include "CVector3.h"
 #include "CPoint.h"
 
 using namespace std;
@@ -9,9 +9,9 @@ int main()
 #pragma region EXERCICE_69_COMMIT_c7149ad0
 
     // Vector Declaration
-    Vector3 myVector;
-    Vector3 myCustomVector(3.0f, 3.0f, 3.0f);
-    Vector3 myInlineVector;
+    CVector3 myVector;
+    CVector3 myCustomVector(3.0f, 3.0f, 3.0f);
+    CVector3 myInlineVector;
 
     //Set Vectors variable
     cout << "Vector3 n1 (setX, setY, setZ) ====>" << endl;
@@ -33,11 +33,11 @@ int main()
 
 #pragma region EXERCICE_70_COMMIT_6cbbec8c
     //VECTORS CREATION
-    Vector3 v1(4.0f, 7.0f, 8.0f);
-    Vector3 v2(7.0f, 16.0f, 4.0f);
+    CVector3 v1(4.0f, 7.0f, 8.0f);
+    CVector3 v2(7.0f, 16.0f, 4.0f);
 
     //COMPARE
-    v1.coincideVal(1.0f, 3.0f, 1.0f); //a) v1 compared to values
+    v1.coincideVal(4.0f, 7.0f, 8.0f); //a) v1 compared to values
     v1.coincideAdr(&v2); //b) // v1 compared to v2 by adr
     v1.coincideRef(v2); //c) //v1 compared to v2 by ref
 
@@ -60,7 +60,9 @@ int main()
     cout << "\n\n";
     //Creating 4 points, displaying nb, destroying 1 point, displaying nb
 
-    CPoint point1(5.0f, 5.0f), point2(3.0f, 3.0f), point3(9.5, 9.5);
+    CPoint point1(5.0f, 5.0f);
+    CPoint point2(3.0f, 3.0f);
+    CPoint point3(9.5, 9.5);
     point1.display_point();
     point2.display_point();
     point3.display_point();

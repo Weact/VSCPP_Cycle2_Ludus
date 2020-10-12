@@ -141,11 +141,11 @@
   <ItemGroup>
     <ClCompile Include="CPoint.cpp" />
     <ClCompile Include="IntroductionCPP_Exercice2.cpp" />
-    <ClCompile Include="vector3.cpp" />
+    <ClCompile Include="CVector3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPoint.h" />
-    <ClInclude Include="vector3.h" />
+    <ClInclude Include="CVector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
