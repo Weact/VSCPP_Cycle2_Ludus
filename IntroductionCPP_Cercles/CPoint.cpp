@@ -1,4 +1,5 @@
 #include "CPoint.h"
+#include "CCercle.h"
 #include <iostream>
 using namespace std;
 
@@ -57,6 +58,20 @@ void CPoint::set_coords(float flt_newX, float flt_newY)
 	m_fltX = flt_newX;
 	m_fltY = flt_newY;
 }
+
+//CHECK IF TWO POINTS ARE EQUALS
+bool CPoint::ptcoincide(CCercle &c)
+{
+	//if (this->m_fltX == c.get_ptCenter().getX() && this->m_fltY == c.get_ptCenter().getY()) {} else {}
+	if (this->m_fltX == c.m_ptCenter.m_fltX && this->m_fltY == c.m_ptCenter.m_fltY) {
+		return true;
+	}
+	else {
+		return false;
+	}
+	
+}
+
 //DISPLAY A POINT'S COORDINATES
 void CPoint::display_point()
 {

@@ -46,12 +46,13 @@ public:
 	void setRadius(float);
 
 	//GETTERS
-	CPoint getCenter();
+	CPoint get_ptCenter();
 	float getRadius();
 
 	//CLASS METHODS
 	void move_center(float, float);
 	void set_center_radius(float, float, float);
+	friend bool CPoint::ptcoincide(CCercle& c); //Friend method of CPoint class
 	void display_circle();
 
 	static int nombre();

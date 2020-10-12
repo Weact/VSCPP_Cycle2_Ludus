@@ -12,18 +12,21 @@ int CCercle::nombre()
 
 CCercle::CCercle() : m_ptCenter(NULL, NULL)
 {
+	cout << "=== A CIRCLE HAS BEEN INSTANTIATED ===" << endl;
 	nb_cercle++;
 	m_fltRadius = NULL;
 }
 
 CCercle::CCercle(float flt_centerX, float flt_centerY, float fltRadius) : m_ptCenter(flt_centerX, flt_centerY)
 {
+	cout << "=== A CIRCLE HAS BEEN INSTANTIATED ===" << endl;
 	nb_cercle++;
 	m_fltRadius = fltRadius;
 }
 
 CCercle::~CCercle()
 {
+	cout << "=== A CIRCLE HAS BEEN DESTROYED ===" << endl;
 	nb_cercle--;
 }
 
@@ -38,7 +41,7 @@ void CCercle::setRadius(float m_newFltRadius)
 	m_fltRadius = m_newFltRadius;
 }
 
-CPoint CCercle::getCenter()
+CPoint CCercle::get_ptCenter()
 {
 	return m_ptCenter;
 }

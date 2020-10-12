@@ -15,6 +15,7 @@
 // 12-10-2020			: Dr. Lucas `Final Commit, Pushing and Validating`
 // ***************************************************************************************
 
+class CCercle;
 class CPoint
 {
 private:
@@ -51,6 +52,9 @@ public:
 	void set_coords(float, float);
 	void display_point();
 
+	//CPoint Member Method and CCercle's Friend Method
+	bool ptcoincide(CCercle& c);
+	
 	static int nombre();
 };
 
