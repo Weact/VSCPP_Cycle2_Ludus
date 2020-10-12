@@ -141,11 +141,12 @@
   <ItemGroup>
     <ClCompile Include="CAffiche.cpp" />
     <ClCompile Include="CPoint.cpp" />
+    <ClCompile Include="CVector3.cpp" />
     <ClCompile Include="IntroductionCPP_FCTAmies.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CAffiche.h" />
     <ClInclude Include="CPoint.h" />
+    <ClInclude Include="CVector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

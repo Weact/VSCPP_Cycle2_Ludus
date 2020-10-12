@@ -1,11 +1,11 @@
 #pragma once
-#ifndef CAFFICHE_H
-#define CAFFICHE_H
+#ifndef CVECTOR3_H
+#define CVECTOR3_H
 
 // ******************************************************************************************************************************
-//	Fichier *			: CAffiche.h
+//	Fichier *			: CVector3.h
 //
-//	Classe				: CAffiche
+//	Classe				: CVector3
 //	Description			: 
 //	Attributs			: -
 //
@@ -15,11 +15,15 @@
 // 12-10-2020			: DR. Lucas `Class creation + Members + Methods + Friends Methods`
 // ******************************************************************************************************************************
 
-class CPoint;
-class CAffiche
+class CVector3
 {
 private:
 	//Private Members/Methods
+	static int nb_vector3;
+
+	float m_nX;
+	float m_nY;
+	float m_nZ;
 
 protected:
 	//Protected Members/Methods
@@ -28,19 +32,30 @@ public:
 	//Public Members
 
 	//CONSTRUCTOR(S)
-	CAffiche();
+	CVector3();
+	CVector3(float, float, float);
 
 	//DESTRUCTOR(S)
-	~CAffiche();
+	~CVector3();
 
 	//Public Methods
 
 		//SETTERS
+	void setX(float);
+	void setY(float);
+	void setZ(float);
+	void setVector(float, float, float);
 
 		//GETTERS
+	float getX();
+	float getY();
+	float getZ();
 
 	//CLASS METHODS
-	void affiche(CPoint& pt);
+	int count_vector3();
+
+	//FRIEND METHOD
+	friend bool coincide(CVector3& v1, CVector3& v2);
 };
 
-#endif // !CAFFICHE_H
+#endif // !CVECTOR3_H

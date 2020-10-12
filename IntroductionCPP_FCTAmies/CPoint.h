@@ -15,8 +15,6 @@
 // 12-10-2020			: DR. Lucas `Class creation + Members + Methods + Friends Methods`
 // ******************************************************************************************************************************
 
-#include "CAffiche.h"
-
 class CPoint
 {
 private:
@@ -54,7 +52,7 @@ public:
 	void display_point();
 
 	//FRIEND METHODS
-	friend void CAffiche::affiche(CPoint& pt); //CAffiche.h
+	friend void affiche(CPoint& pt); //CAffiche.h
 
 	static int nombre();
 };
