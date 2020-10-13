@@ -89,6 +89,13 @@ int main()
     ptB.display_point();
 #pragma endregion
 
+#pragma region operatorsCoutCinOverload
+    cout << ptA;
+
+    cin >> ptA;
+    cout << ptA;
+#pragma endregion
+
 
     return 0;
 }

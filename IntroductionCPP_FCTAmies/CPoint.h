@@ -15,6 +15,8 @@
 // 12-10-2020			: DR. Lucas `Class creation + Members + Methods + Friends Methods`
 // ******************************************************************************************************************************
 
+using namespace std;
+
 class CPoint
 {
 private:
@@ -61,6 +63,13 @@ public:
 	friend CPoint operator*(CPoint&, CPoint&);
 	friend CPoint operator++(CPoint&);
 	friend CPoint operator--(CPoint&);
+
+		//COUT
+	friend ostream& operator<<(ostream& sortie, const CPoint& pt);
+	
+		//CIN
+	friend istream& operator>>(istream& entree, CPoint& pt);
+
 	static int nombre();
 };
 

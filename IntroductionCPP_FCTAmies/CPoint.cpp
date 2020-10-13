@@ -1,6 +1,5 @@
 #include <iostream>
 #include "CPoint.h"
-using namespace std;
 
 int CPoint::nb = 0;
 
@@ -71,6 +70,7 @@ void CPoint::display_point() const
 {
 	cout << "Point's Informations --> " << this->m_nX << " : " << this->m_nY << " <-- " << endl;
 }
+
 //DISPLAY HOW MANY POINTS ARE CURRENTLY INSTANTIATED
 int CPoint::nombre()
 {
@@ -114,4 +114,16 @@ CPoint operator--(CPoint& pt)
 	pt.m_nY--;
 
 	return pt;
+}
+
+ostream& operator<<(std::ostream& sortie, const CPoint& pt)
+{
+	return sortie << "\nPoint [X:Y] -> [" << pt.m_nX << ":" << pt.m_nY << "]" << endl;
+}
+
+istream& operator>>(istream& entree, CPoint& pt)
+{
+	entree >> pt.m_nX;
+	entree >> pt.m_nY;
+	return entree;
 }
