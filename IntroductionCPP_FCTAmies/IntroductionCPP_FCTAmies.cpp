@@ -2,8 +2,11 @@
 #include <stdio.h>
 #include "CPoint.h"
 #include "CVector3.h"
+#include "CMatrice.h"
 
 using namespace std;
+
+CVector3 prod(CMatrice& matrice, CVector3 vector);
 
 int main()
 {
@@ -21,12 +24,15 @@ int main()
     delete myPointDyna;
 #pragma endregion
 
-#pragma region EXERCISE_82_COMMIT_
+#pragma region EXERCISE_82_COMMIT_f98aec10
 
-    CVector3 myVectorAuto(5.0f, 4.0f, 3.0f);
+    CVector3 myVectorAuto(5.0, 4.0, 3.0);
 
     CVector3* myVectorDyna = new CVector3; //"Vecteur de classe Automatique"
-    myVectorDyna->setVector(4.0f, 4.0f, 3.0f); //"Vecteur de classe Dynamique"
+    myVectorDyna->setVector(4.0, 4.0, 3.0); //"Vecteur de classe Dynamique"
+
+    myVectorAuto.display_vector3();
+    myVectorDyna->display_vector3();
 
     if (coincide(myVectorAuto, *myVectorDyna)) {
         cout << "Both vectors3 ARE EQUALS\n" << endl;
@@ -34,11 +40,63 @@ int main()
     else {
         cout << "Both vectors3 ARE NOT EQUALS\n" << endl;
     }
-
+    
     delete myVectorDyna;
 #pragma endregion
 
+#pragma region EXERCISE_83_COMMIT_
+    CVector3 vctA(5.0, 4.0, 6.0);
+    double mtrc_src[3][3]{ {3.0,3.0,3.0},{4.0,4.0,4.0},{5.0, 5.0, 5.0} };
+    CMatrice mtrc_dst(mtrc_src);
+    
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++)
+        {
+                cout << "[" << i << ":" << j << "] : ";
+                cout << mtrc_dst.getMValue(i,j) << endl;
+        }
+    }
+
+    CVector3 vctProd;
+    vctProd = prod(mtrc_dst, vctA);
+    vctProd.display_vector3();
+
+#pragma endregion
 
 
     return 0;
+}
+
+CVector3 prod(CMatrice& matrice, CVector3 vector)
+{
+    double m_dblVctX = 0;
+    double m_dblVctY = 0;
+    double m_dblVctZ = 0;
+
+    for (int i = 0; i < SIZE; i++)
+    {
+        for (int j = 0; j < SIZE; j++)
+        {
+            if (j == 0) {
+                m_dblVctX += matrice.getMValue(i,j) * vector.getX();
+            }
+            else
+            {
+                if (j == 1)
+                {
+                    m_dblVctY += matrice.getMValue(i, j) * vector.getY();
+                }
+                else
+                {
+                    if (j == 2)
+                    {
+                        m_dblVctZ += matrice.getMValue(i, j) * vector.getZ();
+                    }
+                }
+            }
+        }
+    }
+
+    CVector3 vctResult(m_dblVctX, m_dblVctY, m_dblVctZ);
+    return vctResult;
 }

@@ -11,17 +11,24 @@ CPoint::CPoint()
 {
 	cout << "A point has been created successfully !\n" << endl;
 	nb++;
-	this->m_fltX = NULL;
-	this->m_fltY = NULL;
+	this->m_nX = NULL;
+	this->m_nY = NULL;
 }
 //CONSTRUCTOR WITH PARAMETER
-CPoint::CPoint(int flt_X, int flt_Y)
+CPoint::CPoint(int n_X, int n_Y)
 {
 	cout << "A point has been created successfully !\n" << endl;
 	nb++;
-	this->m_fltX = flt_X;
-	this->m_fltY = flt_Y;
+	this->m_nX = n_X;
+	this->m_nY = n_Y;
 }
+
+CPoint::CPoint(CPoint& pt_copy)
+{
+	this->m_nX = pt_copy.m_nX;
+	this->m_nY = pt_copy.m_nY;
+}
+
 //DESTRUCTOR
 CPoint::~CPoint()
 {
@@ -29,42 +36,42 @@ CPoint::~CPoint()
 	nb--;
 }
 //SETTERS
-void CPoint::setX(int m_fltNewX)
+void CPoint::setX(int m_nNewX)
 {
-	this->m_fltX = m_fltNewX;
+	this->m_nX = m_nNewX;
 }
 
-void CPoint::setY(int m_fltNewY)
+void CPoint::setY(int m_nNewY)
 {
-	this->m_fltY = m_fltNewY;
+	this->m_nY = m_nNewY;
 }
 //GETTERS
-int CPoint::getX()
+int CPoint::getX() const
 {
-	return this->m_fltX;
+	return this->m_nX;
 }
 
-int CPoint::getY()
+int CPoint::getY() const
 {
-	return this->m_fltY;
+	return this->m_nY;
 }
 //MOVE THE POINT BY X AND Y 
-void CPoint::move_point(int flt_moveX, int flt_moveY)
+void CPoint::move_point(int n_moveX, int n_moveY)
 {
-	this->m_fltX += flt_moveX;
-	this->m_fltY += flt_moveY;
+	this->m_nX += n_moveX;
+	this->m_nY += n_moveY;
 }
 
 //	SET THE 2D COORDINATES OF A POINT
-void CPoint::set_coords(int flt_newX, int flt_newY)
+void CPoint::set_coords(int n_newX, int n_newY)
 {
-	this->m_fltX = flt_newX;
-	this->m_fltY = flt_newY;
+	this->m_nX = n_newX;
+	this->m_nY = n_newY;
 }
 //DISPLAY A POINT'S COORDINATES
-void CPoint::display_point()
+void CPoint::display_point() const
 {
-	cout << "Point's Informations --> " << this->m_fltX << " : " << this->m_fltY << " <-- " << endl;
+	cout << "Point's Informations --> " << this->m_nX << " : " << this->m_nY << " <-- " << endl;
 }
 //DISPLAY HOW MANY POINTS ARE CURRENTLY INSTANTIATED
 int CPoint::nombre()

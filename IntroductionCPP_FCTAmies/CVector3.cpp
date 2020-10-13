@@ -1,5 +1,6 @@
 #include <iostream>
 #include "CVector3.h"
+#include "CMatrice.h"
 
 using namespace std;
 
@@ -14,7 +15,14 @@ CVector3::CVector3()
     this->m_nZ = NULL;
 }
 
-CVector3::CVector3(float m_newNX, float m_newNY, float m_newNZ)
+CVector3::CVector3(CVector3& vct_copy)
+{
+    this->m_nX = vct_copy.m_nX;
+    this->m_nY = vct_copy.m_nY;
+    this->m_nZ = vct_copy.m_nZ;
+}
+
+CVector3::CVector3(double m_newNX, double m_newNY, double m_newNZ)
 {
     cout << "A vector3 has been created successfully !\n" << endl;
     nb_vector3++;
@@ -29,39 +37,39 @@ CVector3::~CVector3()
     nb_vector3--;
 }
 
-void CVector3::setX(float flt_newX)
+void CVector3::setX(double flt_newX)
 {
     this->m_nX = flt_newX;
 }
 
-void CVector3::setY(float flt_newY)
+void CVector3::setY(double flt_newY)
 {
     this->m_nY = flt_newY;
 }
 
-void CVector3::setZ(float flt_newZ)
+void CVector3::setZ(double flt_newZ)
 {
     this->m_nZ = flt_newZ;
 }
 
-void CVector3::setVector(float m_nX, float m_nY, float m_nZ)
+void CVector3::setVector(double m_nX, double m_nY, double m_nZ)
 {
     this->m_nX = m_nX;
     this->m_nY = m_nY;
     this->m_nZ = m_nZ;
 }
 
-float CVector3::getX()
+double CVector3::getX() const
 {
     return this->m_nX;
 }
 
-float CVector3::getY()
+double CVector3::getY() const
 {
     return this->m_nY;
 }
 
-float CVector3::getZ()
+double CVector3::getZ() const
 {
     return this->m_nZ;
 }
@@ -69,6 +77,11 @@ float CVector3::getZ()
 int CVector3::count_vector3()
 {
     return nb_vector3;
+}
+
+void CVector3::display_vector3() const
+{
+    cout << "Vector3 Coordinates : [X;Y;Z] -> [" << this->m_nX << ";" << this->m_nY << ";" << this->m_nZ << "] !\n" << endl;
 }
 
 bool coincide(CVector3& v1, CVector3& v2)
@@ -80,3 +93,4 @@ bool coincide(CVector3& v1, CVector3& v2)
         return false;
     }
 }
+

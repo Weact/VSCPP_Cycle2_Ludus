@@ -140,11 +140,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CAffiche.cpp" />
+    <ClCompile Include="CMatrice.cpp" />
     <ClCompile Include="CPoint.cpp" />
     <ClCompile Include="CVector3.cpp" />
     <ClCompile Include="IntroductionCPP_FCTAmies.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CMatrice.h" />
     <ClInclude Include="CPoint.h" />
     <ClInclude Include="CVector3.h" />
   </ItemGroup>

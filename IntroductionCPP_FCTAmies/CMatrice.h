@@ -1,13 +1,13 @@
 #pragma once
-#ifndef CPOINT_H
-#define CPOINT_H
+#ifndef CMATRICE_H
+#define CMATRICE_H
 
 // ******************************************************************************************************************************
-//	Fichier *			: CPoint.h
+//	Fichier *			: CMatrice.h
 //
-//	Classe				: CPoint
-//	Description			: Point placement, Point position handler, Point information displayer
-//	Attributs			: nb (Allow us to count how many points are instantiated); m_fltX; m_fltY [2D COORDINATES]
+//	Classe				: CMatrice / vect (ex 83)
+//	Description			: To representate squared matrixe of 3x3 dimensions.
+//	Attributs			: 
 //
 //	Notes				: -
 //
@@ -15,48 +15,38 @@
 // 12-10-2020			: DR. Lucas `Class creation + Members + Methods + Friends Methods`
 // ******************************************************************************************************************************
 
-class CPoint
+#include "CVector3.h"
+
+const int SIZE = 3;
+
+class CMatrice
 {
 private:
 	//Private Members/Methods
-	static int nb;
-	int m_nX;
-	int m_nY;
+	double m_dblMatrice[SIZE][SIZE];
 
 protected:
 	//Protected Members/Methods
 
 public:
 	//Public Members
+	
 
 	//CONSTRUCTOR(S)
-	CPoint();
-	CPoint(CPoint&);
-	CPoint(int, int);
-
+	CMatrice(double matrice[SIZE][SIZE]);
 	//DESTRUCTOR(S)
-	~CPoint();
-
+	~CMatrice();
 	//Public Methods
 
 		//SETTERS
-	void setX(int);
-	void setY(int);
+	void setMValue(int n_x, int n_y, double dbl_value);
 
 		//GETTERS
-	int getX() const;
-	int getY() const;
+	double getMValue(int n_x, int n_y) const;
 
 	//CLASS METHODS
-	void move_point(int, int);
-	void set_coords(int, int);
-	void display_point() const;
 
-	//FRIEND METHODS
-	friend void affiche(CPoint& pt); //CAffiche.h
-
-	static int nombre();
+	//FRIEND METHOD
 };
 
-#endif // !CPOINT_H
-
+#endif // !CMATRICE_H

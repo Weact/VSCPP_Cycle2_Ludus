@@ -7,5 +7,5 @@ using namespace std;
 
 void affiche(CPoint& pt)
 {
-	cout << "Point Coordinates [X:Y] -> [" << pt.m_fltX << ":" << pt.m_fltY << "] !\n" << endl;
+	cout << "Point Coordinates [X:Y] -> [" << pt.m_nX << ":" << pt.m_nY << "] !\n" << endl;
 }
