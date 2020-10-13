@@ -44,7 +44,7 @@ int main()
     delete myVectorDyna;
 #pragma endregion
 
-#pragma region EXERCISE_83_COMMIT_
+#pragma region EXERCISE_83_COMMIT_2c3c0978
     CVector3 vctA(5.0, 4.0, 6.0);
     double mtrc_src[3][3]{ {3.0,3.0,3.0},{4.0,4.0,4.0},{5.0, 5.0, 5.0} };
     CMatrice mtrc_dst(mtrc_src);
