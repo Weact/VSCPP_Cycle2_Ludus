@@ -54,7 +54,13 @@ public:
 
 	//FRIEND METHODS
 	friend void affiche(CPoint& pt); //CAffiche.h
-
+	
+	//OVERLOADS OPERATORS
+	friend CPoint operator+(CPoint&, CPoint&);
+	friend CPoint operator-(CPoint&, CPoint&);
+	friend CPoint operator*(CPoint&, CPoint&);
+	friend CPoint operator++(CPoint&);
+	friend CPoint operator--(CPoint&);
 	static int nombre();
 };
 

@@ -63,6 +63,32 @@ int main()
 
 #pragma endregion
 
+#pragma region operatorsOverloads
+    CPoint ptA(1, 6);
+    CPoint ptB(7, 4);
+
+    ptA.display_point();
+    ptB.display_point();
+
+    ptA = ptA + ptB;
+
+    ptA.display_point();
+
+    ptB = ptB - ptA;
+
+    ptB.display_point();
+
+    ptA = ptA * ptB;
+
+    ptA.display_point();
+
+    ++ptA;
+    ptA.display_point();
+
+    --ptB;
+    ptB.display_point();
+#pragma endregion
+
 
     return 0;
 }

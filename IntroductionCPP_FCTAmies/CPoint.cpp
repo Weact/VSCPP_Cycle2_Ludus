@@ -2,8 +2,6 @@
 #include "CPoint.h"
 using namespace std;
 
-
-
 int CPoint::nb = 0;
 
 //BASIC CONSTRUCTOR
@@ -77,4 +75,43 @@ void CPoint::display_point() const
 int CPoint::nombre()
 {
 	return nb;
+}
+
+CPoint operator+(CPoint& pt1, CPoint& pt2)
+{
+	pt1.m_nX += pt2.m_nX;
+	pt1.m_nY += pt2.m_nY;
+
+	return pt1;
+}
+
+CPoint operator-(CPoint& pt1, CPoint& pt2)
+{
+	pt1.m_nX -= pt2.m_nX;
+	pt1.m_nY -= pt2.m_nY;
+
+	return pt1;
+}
+
+CPoint operator*(CPoint& pt1, CPoint& pt2)
+{
+	pt1.m_nX *= pt2.m_nX;
+	pt1.m_nY *= pt2.m_nY;
+	return pt1;
+}
+
+CPoint operator++(CPoint& pt)
+{
+	pt.m_nX++;
+	pt.m_nY++;
+
+	return pt;
+}
+
+CPoint operator--(CPoint& pt)
+{
+	pt.m_nX--;
+	pt.m_nY--;
+
+	return pt;
 }
