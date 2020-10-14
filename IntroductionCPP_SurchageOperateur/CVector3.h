@@ -5,9 +5,9 @@
 // ******************************************************************************************************************************
 //	Fichier *			: CVector3.h
 //
-//	Classe				: CVector3 / vect (ex 83)
+//	Classe				: CVector3 / vect)
 //	Description			: Vector placement, Vector position handler, Vector information displayer, Vectors Equality Checker
-//	Attributs			: nb_vector3 (Allow us to count how many points are instantiated); m_fltX; m_fltY; m_fltZ [3D COORDINATES]
+//	Attributs			: nb_vector3 (Allow us to count how many points are instantiated); v[3] (array of x y z coordinate)
 //
 //	Notes				: -
 //
@@ -15,15 +15,14 @@
 // 12-10-2020			: DR. Lucas `Class creation + Members + Methods + Friends Methods`
 // ******************************************************************************************************************************
 
+const int SIZE = 3;
+
 	class CVector3
 	{
 	private:
 		//Private Members/Methods
 		static int nb_vector3;
-
-		float m_fltX;
-		float m_fltY;
-		float m_fltZ;
+		float v[SIZE];
 
 	protected:
 		//Protected Members/Methods
@@ -33,8 +32,14 @@
 
 		//CONSTRUCTOR(S)
 		CVector3();
+		CVector3(float m_fltX = 0.0f, float m_fltY = 0.0f, float m_fltZ = 0.0f) {
+			std::cout << ">>>>A vector3 has been created successfully !<<<<\n" << std::endl;
+			nb_vector3++;
+			v[0] = m_fltX;
+			v[1] = m_fltY;
+			v[2] = m_fltZ;
+		}
 		CVector3(CVector3&);
-		CVector3(float, float, float);
 
 		//DESTRUCTOR(S)
 		~CVector3();
@@ -55,14 +60,9 @@
 		//CLASS METHODS
 		int count_vector3();
 		void display_vector3() const; //Display Method of Vector [EXERCISE 83]
-		bool operator==(CVector3&);
-		bool operator!=(CVector3&);
-
+		float &operator[](int value);
 		//FRIEND METHOD
-		friend bool operator==(CVector3&, CVector3&);
-		friend bool operator!=(CVector3&, CVector3&);
-		friend CVector3 operator+(CVector3&, CVector3&);
-		friend float operator*(CVector3&, CVector3&);
+
 };
 
 #endif // !CVECTOR_H
