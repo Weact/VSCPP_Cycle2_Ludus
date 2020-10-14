@@ -21,9 +21,9 @@
 		//Private Members/Methods
 		static int nb_vector3;
 
-		float m_nX;
-		float m_nY;
-		float m_nZ;
+		float m_fltX;
+		float m_fltY;
+		float m_fltZ;
 
 	protected:
 		//Protected Members/Methods
@@ -61,6 +61,8 @@
 		//FRIEND METHOD
 		friend bool operator==(CVector3&, CVector3&);
 		friend bool operator!=(CVector3&, CVector3&);
+		friend CVector3 operator+(CVector3&, CVector3&);
+		friend float operator*(CVector3&, CVector3&);
 };
 
 #endif // !CVECTOR_H

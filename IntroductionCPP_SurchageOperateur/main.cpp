@@ -6,7 +6,7 @@ using namespace std;
 
 int main()
 {
-#pragma region EXERCISE_84_COMMIT_
+#pragma region EXERCISE_84_COMMIT_c89200f7
     CVector3 vctA(2.0f, 4.0f, 6.0f);
     CVector3 vctB(2.0f, 4.1f, 6.0f);
 
@@ -26,5 +26,19 @@ int main()
     else { cout << "VectorB is not equal to VectorA [FRIEND METHOD]\n" << endl; }
 #pragma endregion
     
+#pragma region EXERCISE_85_COMMIT_
+        //Using previously created vectors
+    CVector3 vctC;
+    float scalar_product = 0.0f;
+
+    vctC = operator+(vctA, vctB);
+    scalar_product = operator*(vctA, vctB);
+
+    vctC.display_vector3();
+    cout << "Scalar Product of VectorA and VectorB --> " << scalar_product << "\n" << endl;
+
+#pragma endregion
+
+
     return 0;
 }
