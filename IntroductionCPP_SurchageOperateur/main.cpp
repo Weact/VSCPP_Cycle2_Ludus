@@ -42,7 +42,7 @@ int main()
     */
 #pragma endregion
 
-#pragma region EXERCISE_86_COMMIT_
+#pragma region EXERCISE_86_COMMIT_e6562820
     CVector3 vctE(5.0f, 4.0f, 9.0f);
     vctE[0] = 9.0f;
     vctE[1] = 7.0f;
